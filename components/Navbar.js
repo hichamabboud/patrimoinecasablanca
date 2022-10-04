@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
@@ -29,10 +30,21 @@ const Navbar = () => {
           </nav>   
 
           <div className={`${show} flex-col items-center bg-gray-50 text-gray-600 mt-0  h-96 gap-8 py-10 absolute w-full z-40`}>
-                <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Acceuil </a>
-                <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Nos projets </a>
-                <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Presse </a>
-                <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Contact </a>
+                <NextLink href={"/"}>
+                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Acceuil </a>
+                </NextLink>
+
+                <NextLink href={"/"}>
+                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Nos projets </a>
+                </NextLink>
+
+                <NextLink href={"/"}>
+                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Presse </a>
+                </NextLink>
+
+                <NextLink href={"/"}>
+                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Contact </a>
+                </NextLink>
           </div>   
     </div>
   )
