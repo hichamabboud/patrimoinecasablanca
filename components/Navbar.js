@@ -18,17 +18,22 @@ const Navbar = () => {
 
   return (
     <div>
-      <div class="flex justify-between items-center z-30 shadow-xl p-4 h-16 lg:h-20 relative">
+      <div class="flex justify-between items-center z-30 shadow-xl p-4 h-16 lg:h-18 relative">
 
-        <div className=" hidden lg:block mr-auto ">
-          <Image src="/images/logo.png" width={"70"} height={"60"} />
-        </div>
-        <p className="lg:ml-auto">
-          <span className=" font-bold font-serif text-xl lg:text-3xl" > Patrimoin </span> 
-          <span className=" text-sm italic text-blue-500 font-serif lg:text-xl " > Casablanca </span>
-        </p>
+        <Link href={"/"}>
+          <a className=" hidden lg:block mr-auto">
+            <Image src="/images/logo.png" width={"70"} height={"60"} />
+          </a>
+        </Link>
+        
+        <Link href={"/"}>
+          <a href="/" className="lg:ml-auto">
+            <span className=" font-bold font-serif text-xl lg:text-3xl" > Patrimoin </span> 
+            <span className=" text-sm italic text-blue-500 font-serif lg:text-xl " > Casablanca </span>
+          </a>
+        </Link>
 
-        <div className=" hidden ml-auto lg:flex lg:justify-center space-x-8 lg:mr-8" >
+        <div className=" hidden ml-auto lg:flex lg:justify-center lg:items-center space-x-8 lg:mr-8" >
           <Link href={"/acceuil"}>
             <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Acceuil </a>
           </Link>
@@ -39,7 +44,7 @@ const Navbar = () => {
             <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Presse </a>
           </Link>
           <Link href={"/contact"}>
-            <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Contact </a>
+            <a className=" bg-blue-600 rounded-lg text-white font-bold px-4 py-2 hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Contact </a>
           </Link>
         </div>
         
