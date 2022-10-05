@@ -4,9 +4,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div>
-        <h1> Patrimoine Casablanca </h1>
-      </div>
+      <h1> created by warrior trading </h1>
     </div>
   )
 }

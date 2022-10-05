@@ -1,51 +1,77 @@
-import NextLink from "next/link";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
 
-const Navbar = () => {
-  const [show, setShow] = useState("hidden"); 
+
+const Navbar = () => { 
   const [ isOpen, setIsOpen ] = useState(false);
+  const [ show, setShow ] = useState("hidden")
+  
+  const showMobileNavbar = () => { 
+    setIsOpen(!isOpen)
+    
+    if (!isOpen) {
+      setShow("flex")
+    }
+    else setShow("hidden")
+  }
 
   return (
     <div>
-          <nav className="w-full shadow-md h-14 z-10 items-center flex justify-between px-3 relative " >
-              <a href="/" >
-                  <span className=" font-semibold font-serif text-xl " > Patrimoine </span>
-                  <span className=" text-blue-500 font-mono font-semibold italic " > Casablanca </span>
-              </a>
-              <Image src="/images/logo.png" height={"40"} width={"50"} className="h-12 ml-[-5rem] " alt="patrimoine casablanca logo" />
-              
-              <div>
-          {!isOpen ?
-                  <svg onClick={() => {setIsOpen(!isOpen), setShow("flex")}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"   stroke="currentColor" className="w-7 h-7 bg-blue-500 text-white rounded-sm hover:outline-blue-500 hover:outline hover:outline-1 hover:outline-offset-2 hover:bg-blue-600 cursor-pointer">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                  </svg>
-                    :
-                  <svg onClick={() => {setIsOpen(!isOpen), setShow("hidden")}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 bg-blue-500 text-white rounded-sm hover:outline-blue-500 hover:outline hover:outline-1 hover:outline-offset-2 hover:bg-blue-600 cursor-pointer">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  }
-              </div>
-          </nav>   
+      <div class="flex justify-between items-center z-30 shadow-xl p-4 h-16 lg:h-20 relative">
 
-          <div className={`${show} flex-col items-center bg-gray-50 text-gray-600 mt-0  h-96 gap-8 py-10 absolute w-full z-40`}>
-                <NextLink href={"/"}>
-                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Acceuil </a>
-                </NextLink>
+        <div className=" hidden lg:block mr-auto ">
+          <Image src="/images/logo.png" width={"70"} height={"60"} />
+        </div>
+        <p className="lg:ml-auto">
+          <span className=" font-bold font-serif text-xl lg:text-3xl" > Patrimoin </span> 
+          <span className=" text-sm italic text-blue-500 font-serif lg:text-xl " > Casablanca </span>
+        </p>
 
-                <NextLink href={"/"}>
-                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Nos projets </a>
-                </NextLink>
+        <div className=" hidden ml-auto lg:flex lg:justify-center space-x-8 lg:mr-8" >
+          <Link href={"/acceuil"}>
+            <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Acceuil </a>
+          </Link>
+          <Link href={"/projets"}>
+            <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Nos projets </a>
+          </Link>
+          <Link href={"/presse"}>
+            <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Presse </a>
+          </Link>
+          <Link href={"/contact"}>
+            <a className=" hover:border-b-4 hover:border-blue-600 hover:border-spacing-0"> Contact </a>
+          </Link>
+        </div>
+        
+        <div className=" lg:hidden">
+          <Image src="/images/logo.png" width={"50"} height={"40"} />
+        </div>
+        <div onClick={showMobileNavbar} className="lg:hidden">
+          { !isOpen?
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg> : 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          }
+        </div>
+      </div>
 
-                <NextLink href={"/"}>
-                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Presse </a>
-                </NextLink>
-
-                <NextLink href={"/"}>
-                  <a className=" w-full px-[30%] hover:text-white hover:bg-blue-700 hover:py-3 hover:duration-500 "> Contact </a>
-                </NextLink>
-          </div>   
+      <div className={`w-full h-96 ${show} flex-col justify-center gap-4 bg-gray-600 lg:hidden absolute`} >
+        <Link href={"/acceuil"}>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Acceuil </a>
+        </Link>
+        <Link href={"/projets"}>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> <span className=" w-[200px] block" > Nos projets </span> </a>
+        </Link>
+        <Link href={"/presse"}>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Presse </a>
+        </Link>
+        <Link href={"/contact"}>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Contact </a>
+        </Link>
+      </div>
     </div>
   )
 }
