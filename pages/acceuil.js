@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import TopNavBar from "../components/TopNavBar"
 
@@ -6,7 +7,10 @@ const acceuil = () => {
     <div>
       <TopNavBar />
       <Navbar />
-      <h1>acceuil</h1>
+      <div className="">
+        acceuil
+      </div>
+      <Footer />
     </div>
   )
 }

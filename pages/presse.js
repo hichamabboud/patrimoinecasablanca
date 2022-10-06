@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import TopNavBar from "../components/TopNavBar"
 
@@ -7,6 +8,8 @@ const presse = () => {
         <TopNavBar />
         <Navbar />
         <h1> Presse </h1>  
+      
+        <Footer />
     </div>
   )
 }

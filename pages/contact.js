@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import TopNavBar from "../components/TopNavBar"
 
@@ -160,7 +161,9 @@ const contact = () => {
               </div>
           </div>
         </section>
-{/* <!-- ====== Contact Section End -->   */}
+        {/* <!-- ====== Contact Section End -->   */}
+      
+        <Footer />
     </div>
   )
 }
