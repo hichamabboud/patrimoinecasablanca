@@ -9,16 +9,16 @@ const contact = () => {
         <TopNavBar />
         <Navbar />
         {/* <!-- ====== Contact Section Start --> */}
-        <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative p-10">
-          <div class="container">
-              <div class="flex flex-wrap lg:justify-between -mx-4">
-                <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
-                    <div class="max-w-[570px] mb-12 lg:mb-0">
-                      <span class="block mb-4 text-base text-primary font-semibold">
+        <section className="bg-white py-20 lg:py-[120px] overflow-hidden relative p-10">
+          <div className="container">
+              <div className="flex flex-wrap lg:justify-between -mx-4">
+                <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
+                    <div className="max-w-[570px] mb-12 lg:mb-0">
+                      <span className="block mb-4 text-base text-primary font-semibold">
                       Nous contacter
                       </span>
                       <h2
-                          class="
+                          className="
                           text-dark
                           mb-6
                           uppercase
@@ -31,14 +31,14 @@ const contact = () => {
                           >
                           PRENEZ CONTACT AVEC NOUS
                       </h2>
-                      <p class="text-base text-body-color leading-relaxed mb-9">
+                      <p className="text-base text-body-color leading-relaxed mb-9">
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                           eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
                           adiqua minim veniam quis nostrud exercitation ullamco
                       </p>
-                      <div class="flex mb-8 max-w-[370px] w-full">
+                      <div className="flex mb-8 max-w-[370px] w-full">
                           <div
-                            class="
+                            className="
                             max-w-[60px]
                             sm:max-w-[70px]
                             w-full
@@ -58,17 +58,17 @@ const contact = () => {
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
-                                class="fill-current"
+                                className="fill-current"
                                 >
                                 <path
                                   d="M21.8182 24H16.5584C15.3896 24 14.4156 23.0256 14.4156 21.8563V17.5688C14.4156 17.1401 14.0649 16.7893 13.6364 16.7893H10.4026C9.97403 16.7893 9.62338 17.1401 9.62338 17.5688V21.8173C9.62338 22.9866 8.64935 23.961 7.48052 23.961H2.14286C0.974026 23.961 0 22.9866 0 21.8173V8.21437C0 7.62972 0.311688 7.08404 0.818182 6.77223L11.1039 0.263094C11.6494 -0.0876979 12.3896 -0.0876979 12.9351 0.263094L23.2208 6.77223C23.7273 7.08404 24 7.62972 24 8.21437V21.7783C24 23.0256 23.026 24 21.8182 24ZM10.3636 15.4251H13.5974C14.7662 15.4251 15.7403 16.3995 15.7403 17.5688V21.8173C15.7403 22.246 16.0909 22.5968 16.5195 22.5968H21.8182C22.2468 22.5968 22.5974 22.246 22.5974 21.8173V8.25335C22.5974 8.13642 22.5195 8.01949 22.4416 7.94153L12.1948 1.4324C12.0779 1.35445 11.9221 1.35445 11.8442 1.4324L1.55844 7.94153C1.44156 8.01949 1.4026 8.13642 1.4026 8.25335V21.8563C1.4026 22.285 1.75325 22.6358 2.18182 22.6358H7.48052C7.90909 22.6358 8.25974 22.285 8.25974 21.8563V17.5688C8.22078 16.3995 9.19481 15.4251 10.3636 15.4251Z"
                                   />
                             </svg>
                           </div>
-                          <div class="w-full">
-                          <h4 class="font-bold text-dark text-xl mb-1">Location:</h4>
+                          <div className="w-full">
+                          <h4 className="font-bold text-dark text-xl mb-1">Location:</h4>
                           <Link href={"https://goo.gl/maps/X6VJxZioTmZPsrXd7"}>
-                            <a class="text-base text-body-color">
+                            <a className="text-base text-body-color">
                               <span className=" font-bold text-gray-500 block " > 
                               Centre de la jeunesse Moulay Rachid</span>
                               Boulevard BOUKAMAA ABOU SAID CASABLANCA MAROC
@@ -76,9 +76,9 @@ const contact = () => {
                           </Link>
                           </div>
                       </div>
-                      <div class="flex mb-8 max-w-[370px] w-full">
+                      <div className="flex mb-8 max-w-[370px] w-full">
                           <div
-                            class="
+                            className="
                             max-w-[60px]
                             sm:max-w-[70px]
                             w-full
@@ -98,7 +98,7 @@ const contact = () => {
                                 width="24"
                                 height="26"
                                 viewBox="0 0 24 26"
-                                class="fill-current"
+                                className="fill-current"
                                 >
                                 <path
                                   d="M22.6149 15.1386C22.5307 14.1704 21.7308 13.4968 20.7626 13.4968H2.82869C1.86042 13.4968 1.10265 14.2125 0.97636 15.1386L0.092295 23.9793C0.0501967 24.4845 0.21859 25.0317 0.555377 25.4106C0.892163 25.7895 1.39734 26 1.94462 26H21.6887C22.1939 26 22.6991 25.7895 23.078 25.4106C23.4148 25.0317 23.5832 24.5266 23.5411 23.9793L22.6149 15.1386ZM21.9413 24.4424C21.8992 24.4845 21.815 24.5687 21.6466 24.5687H1.94462C1.81833 24.5687 1.69203 24.4845 1.64993 24.4424C1.60783 24.4003 1.52364 24.3161 1.56574 24.1477L2.4498 15.2649C2.4498 15.0544 2.61819 14.9281 2.82869 14.9281H20.8047C21.0152 14.9281 21.1415 15.0544 21.1835 15.2649L22.0676 24.1477C22.0255 24.274 21.9834 24.4003 21.9413 24.4424Z"
@@ -111,14 +111,14 @@ const contact = () => {
                                   />
                             </svg>
                           </div>
-                          <div class="w-full">
-                            <h4 class="font-bold text-dark text-xl mb-1">Tel:</h4>
-                            <a href="tel:212660277332" class="text-base text-body-color" >+212 6 60 27 73 32</a>
+                          <div className="w-full">
+                            <h4 className="font-bold text-dark text-xl mb-1">Tel:</h4>
+                            <a href="tel:212660277332" className="text-base text-body-color" >+212 6 60 27 73 32</a>
                           </div>
                       </div>
-                      <div class="flex mb-8 max-w-[370px] w-full">
+                      <div className="flex mb-8 max-w-[370px] w-full">
                           <div
-                            class="
+                            className="
                             max-w-[60px]
                             sm:max-w-[70px]
                             w-full
@@ -138,18 +138,18 @@ const contact = () => {
                                 width="28"
                                 height="19"
                                 viewBox="0 0 28 19"
-                                class="fill-current"
+                                className="fill-current"
                                 >
                                 <path
                                   d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z"
                                   />
                             </svg>
                           </div>
-                          <div class="w-full">
-                            <h4 class="font-bold text-dark text-xl mb-1">
+                          <div className="w-full">
+                            <h4 className="font-bold text-dark text-xl mb-1">
                                 Email Address
                             </h4>
-                            <a href="mailto:sarhane.taoufik@gmail.com" class="text-base text-body-color">sarhane.taoufik@gmail.com</a>
+                            <a href="mailto:sarhane.taoufik@gmail.com" className="text-base text-body-color">sarhane.taoufik@gmail.com</a>
                           </div>
                       </div>
                     </div>

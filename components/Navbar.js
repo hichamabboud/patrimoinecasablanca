@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div class="flex justify-between items-center z-30 shadow-xl p-4 h-16 lg:h-18 relative">
+      <div className="flex justify-between items-center z-30 shadow-xl p-4 h-16 lg:h-18 relative">
 
         <Link href={"/"}>
           <a className=" hidden lg:block mr-auto">
