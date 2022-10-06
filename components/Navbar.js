@@ -63,18 +63,18 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`w-full h-96 ${show} flex-col justify-center gap-4 bg-gray-600 lg:hidden absolute`} >
+      <div className={`w-full ${show} pt-10 flex-col gap-4 bg-gray-600 lg:hidden absolute z-[9999] min-h-full `} >
         <Link href={"/acceuil"}>
-          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Acceuil </a>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-3 hover:shadow-md hover:z-50 hover:shadow-white"> Acceuil </a>
         </Link>
         <Link href={"/projets"}>
-          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> <span className=" w-[200px] block" > Nos projets </span> </a>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-3 hover:shadow-md hover:z-50 hover:shadow-white"> <span className=" w-[200px] block" > Nos projets </span> </a>
         </Link>
         <Link href={"/presse"}>
-          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Presse </a>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-3 hover:shadow-md hover:z-50 hover:shadow-white"> Presse </a>
         </Link>
         <Link href={"/contact"}>
-          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-4 hover:shadow-md hover:z-50 hover:shadow-white"> Contact </a>
+          <a className=" text-white px-[50%] font-semibold hover:bg-blue-600 py-3 hover:shadow-md hover:z-50 hover:shadow-white"> Contact </a>
         </Link>
       </div>
     </div>

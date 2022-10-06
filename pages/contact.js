@@ -1,13 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
 import Navbar from "../components/Navbar"
+import TopNavBar from "../components/TopNavBar"
 
 const contact = () => {
   return (
     <div>
+        <TopNavBar />
         <Navbar />
         {/* <!-- ====== Contact Section Start --> */}
-        <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10 p-10">
+        <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative p-10">
           <div class="container">
               <div class="flex flex-wrap lg:justify-between -mx-4">
                 <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
@@ -153,7 +155,7 @@ const contact = () => {
                     </div>
                 </div>
                 <div className="lg:my-auto mx-auto h-64 w-72 lg:h-[400px] lg:w-[500px] relative">
-                  <Image src="/images/patrimoine-contact.jpg" layout="fill" objectFit="cover" className=" z-40 shadow-gray-800 shadow-lg absolute rounded-[30px]" />
+                  <Image src="/images/patrimoine-contact.jpg" layout="fill" objectFit="cover" className="shadow-gray-800 shadow-lg absolute rounded-[30px]" />
                 </div>
                 {/* <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
                     <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
