@@ -155,7 +155,7 @@ const contact = () => {
                     </div>
                 </div>
                 <div className="lg:my-auto mx-auto h-64 w-72 lg:h-[400px] lg:w-[500px] relative">
-                  {/* <Im src="/images/patrimoine-contact.jpg" layout="fill" objectFit="cover" className="shadow-gray-800 shadow-lg absolute rounded-[30px]" alt="patrimoine casablanca event" /> */}
+                  <Image src="/images/patrimoine-contact.jpg" layout="fill" objectFit="cover" className="shadow-gray-800 shadow-lg absolute rounded-[30px]" alt="patrimoine casablanca event" />
                 </div>
               </div>
           </div>
