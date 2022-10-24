@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -19,12 +18,6 @@ const Navbar = () => {
               <span className=" text-xs patrimoine_casablanca text-blue-500 font-bold ml-[-4px] " > Casablanca </span>
             </div>
           </Link>
-
-          {/* <button className=" translate-x-[-30px]" >
-            <Link href={"/"} passHref>
-              <Image src="/images/logo.png" width={"40px"} height="37px" className=" self-center" alt="patrimoine casablanca" />
-            </Link>
-          </button> */}
 
           {!isOpen ? 
           <svg onClick={openMobileMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
