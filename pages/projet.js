@@ -1,13 +1,14 @@
 import Head from "next/head";
-
 import Footer from "../components/Footer";
-import Main from "../components/Main";
+
 import Navbar from "../components/nav/Navbar";
 import TopNav from "../components/nav/TopNav";
+import ProjetPage from "../components/ProjetPage";
 
-const Home = () => {
+
+const projet = () => {
   return (
-    <div className=" w-full flex flex-col min-h-[100vh]">
+    <div className="w-full flex flex-col min-h-[100vh]">
       <Head>
         <title> Patrimoine Casablanca </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -16,10 +17,10 @@ const Home = () => {
             <TopNav />    
             <Navbar />      
         </div>
-        <Main />
+        <ProjetPage />
         <Footer />
     </div>
   )
 }
 
-export default Home;
+export default projet
