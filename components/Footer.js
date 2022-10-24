@@ -8,7 +8,7 @@ const Footer = () => {
       <div className=" w-full px-6 py-8 flex flex-col justify-between items-start gap-6 " >
         <div className=" w-full flex flex-col justify-center items-center gap-2 " >
           <Image src="/images/logo.png" width={"60px"} height={"60px"} alt="patrimoine casablanca" />
-          <p className=" text-sm lg:text-md tracking-wider text-[#4b5563] "> Organiser de concerts et de festivals culturels et artistiques par des jeunes.</p>
+          <p className=" text-sm lg:text-md tracking-wider text-[#4b5563]"></p>
         </div>
         <div className=" w-full flex justify-center gap-6 md:gap-14">
             <Link href={"/projet"} passHr py-8ef>
@@ -30,7 +30,6 @@ const Footer = () => {
             </Link>
         </div>
       </div>
-
       <div className=" bg-black py-6 flex flex-col lg:flex-row lg:justify-between items-center justify-center gap-6 w-[100%] lg:px-32 ">
         <div className="flex justify-center gap-8">
           {/* Facebook link */}
@@ -71,7 +70,7 @@ const Footer = () => {
 
         </div>
         <span className=" border border-white w-80 md:w-[700px] lg:hidden"></span>
-        <span className=" text-sm text-white" > © ${year} Patrimoine Casablanca. All rights reserved.</span>
+        <span className=" text-sm text-white" > © ${year}Patrimoine Casablanca. All rights reserved.</span>
       </div>
     </footer>
   )
