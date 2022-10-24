@@ -4,39 +4,115 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState("hidden");
+
   const openMobileMenu = () => { 
     setIsOpen(!isOpen)
+
+    if (!isOpen) {
+      setMobileMenu("flex")
+    } else setMobileMenu("hidden")
   }
+
+  
   return (
     <div className=" bg-white" >
-      <div className="max-w-7xl h-[6vh] shadow-md mx-auto" >
+      <div className="max-w-7xl h-[6vh] shadow-md mx-auto relative" >
 
-        {/* Mobile version */}
         <div className="h-full flex justify-between items-center mx-4 ">
-          <Link href={"/"} passHref >
-            <div className="cursor-pointer">
-              <span className="text-sm font-bold text-gray-700 patrimoine_casablanca"> Patrimoine </span>
-              <span className=" text-xs patrimoine_casablanca text-blue-500 font-bold ml-[-4px] " > Casablanca </span>
-            </div>
-          </Link>
 
-          {/* <button className=" translate-x-[-30px]" >
-            <Link href={"/"} passHref>
-              <Image src="/images/logo.png" width={"40px"} height="37px" className=" self-center" alt="patrimoine casablanca" />
+          {/* Mobile Screen and Ipad Screen */}
+          <div className=" flex items-center">
+            <button className=" hidden lg:flex " >
+              <Link href={"/"} passHref>
+                <Image src="/images/logo.png" width={"40px"} height="37px" className=" self-center" alt="patrimoine casablanca" />
+              </Link>
+            </button>
+
+            <Link href={"/"} passHref >
+              <div className="cursor-pointer">
+                <span className="text-sm font-bold text-gray-700 patrimoine_casablanca"> Patrimoine </span>
+                <span className=" text-xs patrimoine_casablanca text-blue-500 font-bold ml-[-4px] " > Casablanca </span>
+              </div>
             </Link>
-          </button> */}
+          </div>
 
-          {!isOpen ? 
-          <svg onClick={openMobileMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-            :
-          <svg onClick={openMobileMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        }
 
+          <div className="lg:hidden">
+            {!isOpen ? 
+              <svg onClick={openMobileMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+                :
+              <svg onClick={openMobileMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            }
+          </div>
+
+          {/* Large Screens */}
+          <div className="hidden lg:flex">
+            <Link href={"/projet"} passHref>
+              <button className="buttons">
+                Projets
+              </button>
+            </Link>
+
+            <Link href={"/presse"} passHref>
+              <button className="buttons">
+                Presse
+              </button>
+            </Link>
+
+            <Link href={"/contact"} passHref>
+              <button className="buttons">
+                Contact
+              </button>
+            </Link>
+          </div>
         </div>
+
+        <div className={`${mobileMenu} w-[75vw] min-h-screen bg-[rgba(0,0,0,0.45)] absolute z-50 right-0 bottom-[-10] lg:hidden `} >
+          <div className="flex flex-col w-full mt-32 gap-8 px-2">
+            <Link href={"/projet"} passHref>
+              <button className="buttons_open_menu rounded-xl">
+                Projets
+              </button>
+            </Link>
+
+            <Link href={"/presse"} passHref>
+              <button className="buttons_open_menu rounded-xl">
+                Presse
+              </button>
+            </Link>
+
+            <Link href={"/contact"} passHref>
+              <button className="buttons_open_menu rounded-xl">
+                Contact
+              </button>
+            </Link>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
   )
