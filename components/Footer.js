@@ -8,7 +8,7 @@ const Footer = () => {
       <div className=" w-full px-6 py-8 flex flex-col justify-between items-start gap-6 " >
         <div className=" w-full flex flex-col justify-center items-center gap-2 " >
           <Image src="/images/logo.png" width={"60px"} height={"60px"} alt="patrimoine casablanca" />
-          <p className=" text-sm lg:text-md tracking-wider text-[#4b5563]"></p>
+          <p className=" text-sm lg:text-md tracking-wider text-[#4b5563]"> Organiser de concerts et de festivals culture et artistiques par des jeunes.</p>
         </div>
         <div className=" w-full flex justify-center gap-6 md:gap-14">
             <Link href={"/projet"} passHr py-8ef>
