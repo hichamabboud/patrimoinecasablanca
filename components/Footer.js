@@ -70,7 +70,7 @@ const Footer = () => {
 
         </div>
         <span className=" border border-white w-80 md:w-[700px] lg:hidden"></span>
-        <span className=" text-sm text-white" > © ${year}Patrimoine Casablanca. All rights reserved.</span>
+        <span className=" text-sm text-white" > © {year} Patrimoine Casablanca. All rights reserved.</span>
       </div>
     </footer>
   )

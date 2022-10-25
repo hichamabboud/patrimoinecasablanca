@@ -1,7 +1,7 @@
 const TopNav = () => {
   return (
     <div className=" bg-blue-500">
-      <div className="w-full h-[4vh] flex justify-between items-center px-4 max-w-7xl mx-auto ">
+      <div className="w-full h-[5vh] flex justify-between items-center px-4 max-w-7xl mx-auto ">
         <div className=" flex gap-4">
 
           {/* Facebook link */}

@@ -39,6 +39,7 @@ body {
 
   .buttons_open_menu {
     @apply 
+      relative
       py-4
       shadow-md 
       no-underline 
@@ -55,4 +56,6 @@ body {
       focus:outline-none 
       active:shadow-none
   }
+
+  
 }
