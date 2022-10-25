@@ -30,14 +30,16 @@ const presse = () => {
             <Navbar />      
         </div>
         <main className="flex-1 md:m-10 lg:my-10 lg:mx-20">
-            <h1 className=" text-3xl text-center font-semibold mx-4 my-6 tracking-widest leading-4 bg-blue-500 p-4 text-white md:text-4xl rounded-md "> Presse </h1>      
-            <div className=" max-w-7xl grid grid-cols-1 gap-6 justify-center md:grid-cols-2 lg:grid-cols-3 hover:scale-105">
+            <h1 className=" text-3xl text-center font-semibold mx-4 mt-6 mb-10 tracking-widest leading-4 bg-blue-500 p-4 text-white md:text-4xl rounded-md "> Presse </h1>      
+            <div className=" max-w-7xl grid grid-cols-1 gap-6 justify-center md:grid-cols-2 lg:grid-cols-3">
                   {presses.map((press, index) => (
-                    <a href={press.lien} className=" z-10 shadow-lg flex flex-col justify-center w-72 my-4 mx-auto border border-gray-50" key={index}>
-                        <h2 className=" font-semibold text-gray-600 text-center mb-4"> {press.title} </h2>
-                        <Image src={press.image_url} width={"300px"} height={"300px"} alt={press.title} className="" />  
+                    <div className="z-10 shadow-md flex flex-col justify-center w-72 my-4 mx-auto border border-gray-50" key={index}>
+                        <h2 className=" font-semibold text-gray-600 text-center mb-4 px-4"> {press.title} </h2>
+                          <a href={press.lien} target={"_blank"} rel="noreferrer">
+                            <Image src={press.image_url} width={"300px"} height={"300px"} alt={press.title} className="" />  
+                          </a>
                         <span className=" w-full text-lg font-semibold text-green-600 text-center mt-3 mb-4 "> { press.presse }</span>  
-                    </a>
+                    </div>
                     )) }
             </div>   
         </main>
