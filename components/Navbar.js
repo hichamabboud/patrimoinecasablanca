@@ -6,7 +6,7 @@ function Navbar() {
     const { theme, setTheme, systemTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [mobileMenu, setMobileMenu] = useState("");
+    const [mobileMenu, setMobileMenu] = useState("hidden");
 
     useEffect(() => { setMounted(true)}, []);
 
@@ -61,7 +61,7 @@ function Navbar() {
                 </div>    
             </div>
 
-            <div className={`min-h-screen ${mobileMenu} justify-center pt-20 absolute w-full dark:bg-gray-300`}>
+            <div className={`min-h-screen ${mobileMenu} justify-center pt-20 absolute w-full dark:bg-gray-300 lg:hidden`}>
                 <nav className='flex flex-col space-y-8 w-screen'>
                     <Link href={"/projet"} passHref>
                         <button className="text-zinc-600 font-semibold tracking-widest text-xl w-full py-4 transform hover:-translate-y-1 after:content dark:text-zinc-800 dark:bg-slate-100 dark:shadow-md dark:shadow-blue-200 dark:hover:shadow-xl dark:hover:shadow-blue-300">
