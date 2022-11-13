@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTheme } from 'next-themes'
 import React, { useState, useEffect } from 'react'
 
@@ -5,6 +6,7 @@ function Navbar() {
     const { theme, setTheme, systemTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState("");
 
     useEffect(() => { setMounted(true)}, []);
 
@@ -34,28 +36,52 @@ function Navbar() {
     }
 
     return (
-        <div className='bg-slate-100 shadow-sm dark:bg-gray-600'>
-            <div className='max-w-7xl mx-auto'>
-                <div className='flex items-center justify-between h-10 mx-2'>
-                    <div className='font-fasthand dark:text-zinc-50'>
-                        <span className='font-semibold text-lg'>Patrimoine</span>
-                        <span className=''>Casablanca</span>
-                    </div>
+        <div className='min-w-full'>
+            <div className='bg-slate-100 shadow-sm dark:bg-gray-600'>
+                <div className='max-w-7xl mx-auto'>
+                    <div className='flex items-center justify-between h-10 mx-2'>
+                        <div className='font-fasthand dark:text-zinc-50'>
+                            <span className='font-semibold text-lg'>Patrimoine</span>
+                            <span className=''>Casablanca</span>
+                        </div>
 
-                    <div className='flex space-x-4'>
-                        {!isOpen ? 
-                        <svg onClick={() => {setIsOpen(true)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg> :
-                        <svg onClick={() => {setIsOpen(false)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        }
+                        <div className='flex space-x-4'>
+                            {!isOpen ? 
+                            <svg onClick={() => {setIsOpen(true); setMobileMenu("flex")}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg> :
+                            <svg onClick={() => {setIsOpen(false); setMobileMenu("hidden")}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            }
 
-                        {renderThemeChange()}
+                            {renderThemeChange()}
+                        </div>
                     </div>
-                </div>
-            </div>      
+                </div>    
+            </div>
+
+            <div className={`min-h-screen ${mobileMenu} justify-center pt-20 absolute w-full dark:bg-gray-300`}>
+                <nav className='flex flex-col space-y-8 w-screen'>
+                    <Link href={"/projet"} passHref>
+                        <button className="text-zinc-600 font-semibold tracking-widest text-xl w-full py-4 transform hover:-translate-y-1 after:content dark:text-zinc-800 dark:bg-slate-100 dark:shadow-md dark:shadow-blue-200 dark:hover:shadow-xl dark:hover:shadow-blue-300">
+                            Projets
+                        </button>
+                    </Link>
+                        
+                    <Link href={"/presse"} passHref>
+                        <button className="text-zinc-600 font-semibold tracking-widest text-xl w-full py-4 transform hover:-translate-y-1 after:content dark:text-zinc-800 dark:bg-slate-100 dark:shadow-md dark:shadow-blue-200 dark:hover:shadow-xl dark:hover:shadow-blue-300">
+                            Presse
+                        </button>
+                    </Link>
+
+                    <Link href={"/contact"} passHref>
+                        <button className="text-zinc-600 font-semibold tracking-widest text-xl w-full py-4 transform hover:-translate-y-1 after:content dark:text-zinc-800 dark:bg-slate-100 dark:shadow-md dark:shadow-blue-200 dark:hover:shadow-xl dark:hover:shadow-blue-300">
+                            Contact
+                        </button>
+                    </Link>
+                </nav>
+            </div>
         </div>
   )
 }
