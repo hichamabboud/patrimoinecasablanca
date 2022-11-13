@@ -36,10 +36,10 @@ function Navbar() {
     }
 
     return (
-        <div className='min-w-full'>
-            <div className='bg-slate-100 shadow-sm dark:bg-gray-600'>
-                <div className='max-w-7xl mx-auto'>
-                    <div className='flex items-center justify-between h-10 mx-2'>
+        <div className=''>
+            <div className='bg-slate-100 shadow-sm dark:bg-gray-600 max-w-7xl mx-auto'>
+                <div className=''>
+                    <div className='flex items-center justify-between h-[6vh] lg:h-[7vh] mx-4'>
                         <div className='font-fasthand dark:text-zinc-50'>
                             <span className='font-semibold text-lg'>Patrimoine</span>
                             <span className=''>Casablanca</span>
